@@ -23,12 +23,13 @@ app.get("/api/notes", function(req, res) {
 });
 // post should allow to save the note on the db.json file and return it back onto the notepad
 // was having trouble with 'require' aspect in linking the files to the appropriate route
-// got help with re-doing JS file with peer help in order to run without routing it....took awhile
+// got help with re-doing JS file with peer help in order to run without routing it outside of the file....took awhile
 app.post("/api/notes", function(req, res) {
   let newNote = req.body;
   newNote.id = uuid.v4()
   fs.readFile("./db/db.json", (err, data) => {
       if (err) throw err;
+
       let fileJSON = JSON.parse(data)
       // pushes the note to the db.json for the notes app
       fileJSON.push(newNote)
@@ -43,6 +44,7 @@ app.delete("/api/notes/:id", function(req, res) {
   const currentID = req.params.id
   fs.readFile("./db/db.json", (err, data) => {
       if (err) throw err;
+      
       let fileJSON = JSON.parse(data)
       for (let i = 0; i < fileJSON.length; i++) {
           if (currentID === fileJSON[i].id) {
