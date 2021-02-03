@@ -22,6 +22,8 @@ app.get("/api/notes", function(req, res) {
   });
 });
 // post should allow to save the note on the db.json file and return it back onto the notepad
+// was having trouble with 'require' aspect in linking the files to the appropriate route
+// got help with re-doing JS file with peer help in order to run without routing it....took awhile
 app.post("/api/notes", function(req, res) {
   let newNote = req.body;
   newNote.id = uuid.v4()
