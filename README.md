@@ -11,4 +11,4 @@ Its installed by typing 'npm i express' in the termianl and then running 'node s
 
 It is launched through Heroku afterwards to display the project live on a web app.
 
-![Screenshot]('./Develop/public/assets/Screen Shot 2021-02-03 at 7.13.11 PM.png)
+![alt text]('./Develop/public/assets/screenshot.png)
