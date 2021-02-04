@@ -11,4 +11,7 @@ Its installed by typing 'npm i express' in the termianl and then running 'node s
 
 It is launched through Heroku afterwards to display the project live on a web app.
 
-[screenshot]('./Develop/screenshot.png')
+<a href="./Develop/screenshot.png" rel="screenshot">screenshot</a>
+
+Link to GitHub: https://github.com/cfuer12/noteTaker
+
